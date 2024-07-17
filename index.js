@@ -1,18 +1,30 @@
+const user = {
+  name: 'emily',
+  age: 27
+};
 
-const showMainMenu = require('./lib/showMainMenu.js')
 
+//constructor function - generates objects
+function User(name, age, hobbies) {
+  this.name = name;
+  this.age = age;
+  this.hobbies = hobbies;
 
-function init() {
-  // Show a welcome message
-  console.log(`
-  -----------
-  Welcome to the ToDo Wiz
-  -----------
-  `);
-
-  // Show the menu options
-  showMainMenu()
+  // must call the nested functions in the direct parent to make them work
   
 }
+User.prototype.getAge = function () {
+  return this.age;
+}
+User.prototype.haveBirthday = function () {
+  this.age++;
+}
 
-init();
+
+//these are the actual objects but can now be called
+const emily = new User('Emily', 27, ['bingo', 'fishing']);
+const bob = new User('Bob', 57, ['pickleball', 'phone']);
+
+
+
+
