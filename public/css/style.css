@@ -1,0 +1,18 @@
+body {
+    background: rgb(238, 235, 233);
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.kitty {
+    max-width: 45%;
+    margin: 45px auto 25px;
+    display: block;
+}
+
+.message {
+    text-align: center;
+}
